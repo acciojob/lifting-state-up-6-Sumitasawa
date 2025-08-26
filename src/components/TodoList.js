@@ -7,18 +7,11 @@ const TodoList = ({ todos, handleComplete }) => {
 
     <ul style={{ listStyle: "none", padding: 0 }}>
       {todos.map((todo) => (
-        <li
-          key={todo.id}
-          style={{
-            margin: "10px 0",
-            fontSize: "18px",
-          }}
-        >
+        <li key={todo.id}>
           {todo.text}
-          {todo.completed ? <></> : (
+          {!todo.completed &&  (
             <button
               onClick={() => handleComplete(todo.id)}
-              style={{ marginLeft: "10px" }}
             >
               Complete
             </button>
