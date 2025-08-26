@@ -15,7 +15,7 @@ const TodoList = ({ todos, handleComplete }) => {
           }}
         >
           {todo.text}
-          {!todo.completed && (
+          {todo.completed ? <></> : (
             <button
               onClick={() => handleComplete(todo.id)}
               style={{ marginLeft: "10px" }}
