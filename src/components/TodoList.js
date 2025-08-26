@@ -2,6 +2,9 @@ import React from 'react'
 
 const TodoList = ({ todos, handleComplete }) => {
   return (
+   <>
+   <h2>Child Component</h2>
+
     <ul style={{ listStyle: "none", padding: 0 }}>
       {todos.map((todo) => (
         <li
@@ -17,12 +20,13 @@ const TodoList = ({ todos, handleComplete }) => {
               onClick={() => handleComplete(todo.id)}
               style={{ marginLeft: "10px" }}
             >
-              Complete
+              complete
             </button>
           )}
         </li>
       ))}
     </ul>
+   </>
   );
 }
 
