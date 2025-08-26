@@ -20,7 +20,7 @@ const TodoList = ({ todos, handleComplete }) => {
               onClick={() => handleComplete(todo.id)}
               style={{ marginLeft: "10px" }}
             >
-              complete
+              Complete
             </button>
           )}
         </li>
